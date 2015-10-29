@@ -1,0 +1,25 @@
+body {
+  font-family: sans-serif;
+  background-color: rgb(227,224,226);
+}
+
+#main_div {
+  margin: auto;
+  width:600px;
+}
+
+p.favorite_quotes{
+  margin-top: 20px;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width:inherit;
+  border-style: solid;
+  border-width: medium;
+  border-color: white;
+  padding-top: 25px;
+   padding-right: 50px;
+   padding-bottom: 25px;
+   padding-left: 50px;
+   text-align: center;
+}
