@@ -1,0 +1,171 @@
+header {
+
+  position: fixed;
+  background-color: white;
+  z-index: 20;
+  padding-top: 30px;
+}
+header h1{
+  margin-top: 10px !important;
+
+}
+
+header nav {
+  float: right !important;
+  overflow: hidden;
+  margin-left: 100px !important;
+  margin-right: 60px; !important;
+
+}
+
+
+
+
+h1 img {
+  width:30px;
+  height:30px;
+  margin-right: 10px;
+}
+
+.header_class li {
+  display: inline;
+  text-decoration: none;
+  float: right;
+  overflow: hidden;
+  margin:15px;
+}
+
+.header_class a {
+  text-decoration: none;
+  font-family: 'Open Sans',arial, sans-serif;
+  font-style: normal;
+  color:rgb(105,111,104);
+  font-size: 20px;
+  text-align: right;
+}
+.header_class a:hover {
+  text-decoration: underline;
+  font-family: 'Open Sans',arial, sans-serif;
+  font-style: normal;
+  color:black;
+  font-size:22px;
+}
+
+.logo {
+  float:left;
+  overflow:hidden;
+  font-family: 'Open Sans',arial, sans-serif;
+}
+.hero_unit {
+  margin-top: 100px;
+  position:relative;
+  margin-bottom: 250px;
+
+}
+.hero_unit h3,.hero_unit p {
+  text-align: center;
+  font-family: 'Open Sans',arial, sans-serif;
+  font-style: normal;
+font-variant: normal;
+font-weight: 600;
+}
+.hero_unit h3 {
+  font-size: 45px;
+  font-style: normal;
+}
+
+.hero_unit img {
+  margin-top: 20px;
+}
+
+.hero_unit p {
+  color:rgb(105,111,104);
+  font-size: 20px;
+}
+
+
+.pagelinks,{
+  float: left;
+  overflow: hidden;
+}
+
+.feature_set {
+  float: left;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.feature_set img {
+  height: 58px;
+}
+
+.feature_title {
+  margin-top: 10px;
+  font-family: 'Open Sans',arial, sans-serif;
+  font-size: 20px;
+  color:rgb(102,102,102);
+  margin-bottom: 4px !important;
+  text-decoration: underline;
+}
+
+.feature_desc {
+  font-family: 'Open Sans',arial, sans-serif;
+  font-size: 14px;
+  color:rgb(102,102,102);
+}
+
+.separator_line {
+  border-top: 5px solid rgb(102,102,102);
+}
+
+
+.pagelinks li {
+  margin-left: 0px !important;
+  text-decoration: none;
+  list-style: none;
+}
+
+.pagelinks p{
+  font-family: 'Open Sans',arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 5px !important;
+  color:rgb(102,102,102);
+  font-style: oblique;
+}
+
+.pagelinks a{
+  font-family: 'Open Sans',arial, sans-serif;
+  text-decoration:underline;
+  color: rgb(102,102,102);
+}
+.social {
+  float: right;
+  overflow: hidden;
+
+}
+
+.social img {
+  width:90px;
+  height:90px;
+  float: right;
+  overflow: hidden;
+}
+
+.social p {
+  text-align: right;
+}
+
+.copyright img {
+  width:21px;
+  height:21px;
+  padding: none;
+}
+
+.copyright {
+  float: left;
+  overflow: hidden;
+}
+.subscribe {
+  float: right;
+  overflow: hidden;
+}
