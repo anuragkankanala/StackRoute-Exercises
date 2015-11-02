@@ -3,28 +3,36 @@ header {
   position: fixed;
   background-color: white;
   z-index: 20;
-  padding-top: 30px;
+  padding-top: 20px;
+
 }
 header h1{
-  margin-top: 10px !important;
-
+  margin-top: 0px !important;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
 }
 
 header nav {
   float: right !important;
   overflow: hidden;
-  margin-left: 100px !important;
-  margin-right: 60px; !important;
 
+  margin-right: 60px; !important;
+  padding-left: 0px;
+  margin-left: 0px !important;
 }
 
-
+.logo{
+  margin-bottom: 0px !important;
+  margin-right: 0px !important;
+  margin-top: 8px !important;
+}
 
 
 h1 img {
   width:30px;
   height:30px;
   margin-right: 10px;
+
 }
 
 .header_class li {
@@ -59,7 +67,8 @@ h1 img {
 .hero_unit {
   margin-top: 100px;
   position:relative;
-  margin-bottom: 250px;
+  margin-bottom: 20px;
+
 
 }
 .hero_unit h3,.hero_unit p {
@@ -72,27 +81,33 @@ font-weight: 600;
 .hero_unit h3 {
   font-size: 45px;
   font-style: normal;
+  color: #ef3939;
 }
 
 .hero_unit img {
   margin-top: 20px;
+
 }
 
 .hero_unit p {
   color:rgb(105,111,104);
   font-size: 20px;
 }
+.pageLinks_social {
 
+}
 
-.pagelinks,{
+.pagelinks{
   float: left;
   overflow: hidden;
+
 }
 
 .feature_set {
   float: left;
   overflow: hidden;
   margin-top: 50px;
+
 }
 
 .feature_set img {
@@ -114,15 +129,22 @@ font-weight: 600;
   color:rgb(102,102,102);
 }
 
-.separator_line {
-  border-top: 5px solid rgb(102,102,102);
+
+
+.pageLinks_social {
+  margin-top: 10px;
+  background-color:rgb(245,245,245) !important;
 }
 
+.pagelinks {
+  margin-top: 10px;
 
+}
 .pagelinks li {
   margin-left: 0px !important;
   text-decoration: none;
   list-style: none;
+
 }
 
 .pagelinks p{
@@ -138,14 +160,19 @@ font-weight: 600;
   text-decoration:underline;
   color: rgb(102,102,102);
 }
+
+.pagelinks a:hover {
+  color:black;
+}
 .social {
   float: right;
   overflow: hidden;
 
+  margin-top: 9px;
 }
 
 .social img {
-  width:90px;
+  width:150px;
   height:90px;
   float: right;
   overflow: hidden;
@@ -153,19 +180,31 @@ font-weight: 600;
 
 .social p {
   text-align: right;
+  color: rgb(102,102,102);
+  font-size: 18px;
+  font-family: 'Open Sans',arial, sans-serif;
 }
 
 .copyright img {
-  width:21px;
-  height:21px;
+  width:30px;
+  height:30px;
   padding: none;
 }
 
 .copyright {
   float: left;
   overflow: hidden;
+  font-family: 'Open Sans',arial, sans-serif;
+  color: rgb(102,102,102);
+
 }
-.subscribe {
-  float: right;
-  overflow: hidden;
+.copyright a{
+  font-family: 'Open Sans',arial, sans-serif;
+  text-decoration:underline;
+  color: rgb(102,102,102);
+}
+
+.copyright a:hover {
+  color:black;
+
 }
