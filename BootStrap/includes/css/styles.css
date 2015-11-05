@@ -19,7 +19,10 @@ Notes:	 Hand coded for Udemy.com
 /* --------------------------------------
    Typography
    -------------------------------------- */
-
+body {
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
 
 
 /* --------------------------------------
@@ -52,13 +55,89 @@ Notes:	 Hand coded for Udemy.com
 /* --------------------------------------
    Carousel
    -------------------------------------- */
+#myCarousel {
+  margin-top:70px;
+}
+
+#myCarousel item {
+  height:500px;
+}
+
+#slide1 {
+  background: url('../../images/carousel2_large.png') top center;
+  background-repeat: no-repeat;
+  height:500px;
+}
+
+#slide1 h2, #slide1 p {
+  color: rgb(239,57,57);
+}
+
+#slide2 {
+  background: url('../../images/carousel1_large.png') top center;
+  background-repeat: no-repeat;
+  height:500px;
+}
+
+#slide3 {
+  background: url('../../images/cloud-ready_large.png') top center;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+#slide3 h2, #slide3 p {
+  color: rgb(239,57,57);
 
 
+
+}
+
+.carousel-indicators li {
+  border: 1px solid rgb(239,57,57);
+}
+
+.carousel-indicators .active {
+  background-color: rgb(239,57,57);
+}
+
+
+/*---------------------------------------
+  Portfolio Features
+  ---------------------------------------*/
+  #portfolio_features1, #feature_heading, #portfolio_features2  {
+    text-align: center;
+  }
+
+
+  /*---------------------------------------
+    Press
+    ---------------------------------------*/
+  #press_heading, #press {
+    text-align: center;
+  }
+
+/*---------------------------------------
+  Download Panel
+  ---------------------------------------*/
+.well .page-header {
+  margin-top: 0px;
+}
+
+.well .page-header h1 {
+  margin-top:0px;
+}
 
 /* --------------------------------------
    Global Styles
    -------------------------------------- */
+.alert {
+  margin-top: 20px;
+  display: none;
+}
 
+.well {
+  margin:20px 0;
+}
 
 
 /* --------------------------------------
@@ -67,15 +146,77 @@ Notes:	 Hand coded for Udemy.com
 
 /* Portrait & landscape phone */
 @media (max-width: 480px) {
+  #myCarousel item {
+    height:310px;
+  }
 
+  #slide1 {
+    background: url('../../images/carousel2_small.png') top center;
+    background-repeat: no-repeat;
+    height:310px;
+  }
+
+  #slide2 {
+    background: url('../../images/carousel1_small.png') top center;
+    background-repeat: no-repeat;
+    height:310px;
+  }
+
+  #slide3 {
+    background: url('../../images/cloud-ready_small.png') top center;
+    background-repeat: no-repeat;
+    height: 310px;
+  }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+  #myCarousel item {
+    height:400px;
+  }
 
+  #slide1 {
+    background: url('../../images/carousel2_medium.png') top center;
+    background-repeat: no-repeat;
+    height:400px;
+  }
+
+  #slide2 {
+    background: url('../../images/carousel1_medium.png') top center;
+    background-repeat: no-repeat;
+    height:400px;
+  }
+
+  #slide3 {
+    background: url('../../images/cloud-ready_medium.png') top center;
+    background-repeat: no-repeat;
+    height: 400px;
+  }
 }
 
 /* Large desktop */
 @media (min-width: 1200px) {
+  #myCarousel item {
+    height:500px;
+  }
+
+  #slide1 {
+    background: url('../../images/carousel2_large.png') top center;
+    background-repeat: no-repeat;
+    height:500px;
+  }
+
+  #slide2 {
+    background: url('../../images/carousel1_large.png') top center;
+    background-repeat: no-repeat;
+    height:500px;
+  }
+
+  #slide3 {
+    background: url('../../images/cloud-ready_large.png') top center;
+    background-repeat: no-repeat;
+    height: 500px;
+  }
+
 
 }
