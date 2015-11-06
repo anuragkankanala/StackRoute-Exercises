@@ -14,4 +14,6 @@ $(function() {
     e.preventDefault();
     $('#successAlert').slideDown();
   });
+
+  $('[rel="dummy_link"]').tooltip();
 });

@@ -108,12 +108,55 @@ body {
     text-align: center;
   }
 
+  #portfolio_features1 img, #portfolio_features2 img {
+    height:auto;
+    margin-bottom: 25px;
+    max-width: 90%;
+  }
+
+  .panel .panel-heading h3 {
+    margin-top: 10px;
+  }
+
+  .panel p {
+    margin-bottom: 0px;
+  }
+
+  .panel a {
+    padding-top: 5px;
+    padding-bottom: 0px;
+  }
+
+  #portfolio_features1 p, #portfolio_features2 p {
+    text-align: justify;
+  }
+
+
+  /*---------------------------------------
+    Tab-Content
+    ---------------------------------------*/
+    .tab-pane img {
+      width:15%;
+      height:auto;
+      margin:15px;
+    }
+
+    .tab-pane p {
+      overflow: hidden;
+      font-size:18px;
+      margin-top:50px;
+    }
 
   /*---------------------------------------
     Press
     ---------------------------------------*/
   #press_heading, #press {
     text-align: center;
+  }
+
+  #press img {
+    max-width: 90%;
+    height:auto;
   }
 
 /*---------------------------------------
@@ -127,6 +170,12 @@ body {
   margin-top:0px;
 }
 
+/*---------------------------------------
+Footer
+  ---------------------------------------*/
+footer {
+  background-color: grey;
+}
 /* --------------------------------------
    Global Styles
    -------------------------------------- */
@@ -138,6 +187,8 @@ body {
 .well {
   margin:20px 0;
 }
+
+
 
 
 /* --------------------------------------
@@ -218,5 +269,8 @@ body {
     height: 500px;
   }
 
+  body {
+
+  }
 
 }

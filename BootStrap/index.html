@@ -10,6 +10,9 @@
   <!-- Bootstrap CSS -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link href="includes/css/bootstrap-social.css" rel="stylesheet">
+  <link href="includes/css/font-awesome.min.css" rel="stylesheet">
+  <link href="includes/css/font-awesome.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link href="includes/css/styles.css" rel="stylesheet">
@@ -63,13 +66,15 @@
                 <li><a href="#"><span class="glyphicon glyphicon-wrench"></span> Setings</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-off"></span> Sign Out</a></li>
                 <li class="divider"></li>
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span>Create Account</a></li>
+                <li><a href="#createAccountModal" role="button" data-toggle="modal"><span class="glyphicon glyphicon-user"></span>Create Account</a></li>
               </ul>
             </li>
           </ul><!--end of my account list-->
         </div><!--end of navbar collapse-->
-      </div><!--end of container-->
+      </div><!--end of container-fluid-->
     </div><!-- end of nav bar-->
+
+
 
     <div class="carousel slide" id="myCarousel">
       <!--Indicators-->
@@ -125,7 +130,7 @@
           <p>Easily pick up browsing where you left off, across your devices.
             Just sign in to your Lite! account to sync browsing data - bookmarks, open tabs, passwords and typed history.
             Remember to get the Lite! browser for your mobile device to stay in sync on the go.</p>
-          <a href="" class="btn btn-large btn-link"><small>Know more...</small></a>
+          <a href="" data-original-title="Dummy Link :P" rel="dummy_link" class="btn btn-large btn-link"><small>Know more...</small></a>
         </div><!--end of panel-->
       </div><!--end of feature-->
 
@@ -138,7 +143,7 @@
           <p>Over 1,000 extensions make it easy to customize Lite!.
             Download the extensions and themes you like from Lite!'s add-ons catalog to get the best browser experience
             with a personal touch. With the animated themes, you can even bring Lite!'s start page to life.</p>
-          <a href="" class="btn btn-large btn-link"><small>Know more...</small></a>
+          <a href="" class="btn btn-large btn-link" data-original-title="Dummy Link :P" rel="dummy_link"><small>Know more...</small></a>
         </div><!--end of panel-->
       </div><!--end of feature-->
 
@@ -150,8 +155,8 @@
           <img src="images/chrome-new.jpg" alt="Cross Platform">
           <p>Have multiple computers that you want to keep in sync?
             Lite Sync enables just that. Your bookmarks, history, passwords and settings can all
-             be synchronised across different instances of Lite browser through our encrypted Sync infrastructure.</p>
-          <a href="" class="btn btn-large btn-link"><small>Know more...</small></a>
+             be synchronised across different instances of Lite browser through our encrypted Sync infrastructure.          </p>
+          <a href="" class="btn btn-large btn-link" data-original-title="Dummy Link :P" rel="dummy_link"><small>Know more...</small></a>
         </div><!--end of panel-->
       </div><!--end of feature-->
     </div><!--end of portfolio_features1-->
@@ -166,20 +171,20 @@
           <p>The Only Browser to consistently win the Best Browser Award for 3 years straight.
             The inbuilt security features give you a peace of mind for all your web based transactions
             protecting you from attacks and malware.</p>
-          <a href="" class="btn btn-large btn-link"><small>Know more...</small></a>
+          <a href="" class="btn btn-large btn-link" data-original-title="Dummy Link :P" rel="dummy_link"><small>Know more...</small></a>
         </div><!--end of panel-->
       </div><!--end of feature-->
 
       <div class="col-sm-4 feature2">
         <div class="panel">
           <div class="panel-heading">
-            <h3>Fast and low on System Resources.</h3>
+            <h3>Fast and Efficient.</h3>
           </div><!--end panel-heading-->
           <img src="images/speed.png" alt="Speed">
           <p>Over 1,000 extensions make it easy to customize Lite!.
             Download the extensions and themes you like from Lite!'s add-ons catalog to get the best browser experience
             with a personal touch. With the animated themes, you can even bring Lite!'s start page to life.</p>
-          <a href="" class="btn btn-large btn-link"><small>Know more...</small></a>
+          <a href="" class="btn btn-large btn-link" data-original-title="Dummy Link :P" rel="dummy_link"><small>Know more...</small></a>
         </div><!--end of panel-->
       </div><!--end of feature-->
 
@@ -189,15 +194,75 @@
             <h3>Web Technology.</h3>
           </div><!--end panel-heading-->
           <img src="images/webtech.png" alt="Web Technology">
-          <p>Built for the web, with the Web.
+          <p>
             One of the things that makes Lite! unique is that it is built on modern web technologies.
             We use JavaScript and React to create the user interface with the help of Node.js and a long list of NPM modules.
             Lite! is the web built with the web.</p>
-          <a href="" class="btn btn-large btn-link"><small>Know more...</small></a>
+          <a href="" class="btn btn-large btn-link" data-original-title="Dummy Link :P" rel="dummy_link"><small>Know more...</small></a>
         </div><!--end of panel-->
       </div><!--end of feature-->
     </div><!--end of portfolio_features2-->
+    <hr>
+    <div class="row" id="moreFeatures">
+      <div class="col-sm-12">
+        <h3>Some Great Features of Lite! Browser</h3>
+        <div class="tabbable">
+          <ul class="nav-tabs nav">
+            <li class="active"><a href="#tab1" data-toggle="tab">Adaptive Interface</a></li>
+            <li><a href="#tab2" data-toggle="tab">Spatial Navigation</a></li>
+            <li><a href="#tab3" data-toggle="tab">Sync</a></li>
+            <li><a href="#tab4" data-toggle="tab">Email</a></li>
+            <li><a href="#tab5" data-toggle="tab">Powerful Bookmarks</a></li>
+            <li><a href="#tab6" data-toggle="tab">Web Panels</a></li>
+          </ul>
 
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+              <img src="images/adaptiveInterface.png" alt="Adaptive Interface" class="pull-left">
+              <p>Lite!’s color scheme will adapt as you browse the web, much like a chameleon adapts to its surroundings.
+                A clean and modern look complements the content. Facebook turns Lite! blue,
+                The Verge will make it orange – If you so wish.</p>
+            </div><!--end of tab-pane-->
+
+            <div class="tab-pane" id="tab2">
+              <img src="images/spatialNavigation.png" alt="Spatial Navigation" class="pull-left">
+              <p>Say goodbye to tab-cycling through web page content now.
+                You can move in every axis using the arrow keys. Get faster anywhere on the web page using your keyboard.</p>
+            </div><!--end of tab-pane-->
+
+            <div class="tab-pane" id="tab3">
+              <img src="images/Sync.png" alt="Sync" class="pull-left">
+              <p>Have multiple computers that you want to keep in sync? Lite! Sync enables this beautifully.
+                Your bookmarks, history, passwords and settings can all be synchronized across various instances of
+                Lite through the encrypted sync infrastructure. Watch out – It’s coming soon.</p>
+            </div><!--end of tab-pane-->
+
+            <div class="tab-pane" id="tab4">
+              <img src="images/email.png" alt="Email" class="pull-left">
+              <p>Now that’s a double treat – your e-mail client built into your web browser.
+                E-mail is still undeniably important to many of us.
+                Lite offers a robust, efficient, light-weight mail client.
+                And, it's going to be called M3. Stay tuned for updates.</p>
+            </div><!--end of tab-pane-->
+
+            <div class="tab-pane" id="tab5">
+              <img src="images/bookmarks.png" alt="Bookmarks" class="pull-left">
+              <p>How many bookmarks do you have in your browser? 56, 225, or 1056? If you use bookmarks a lot,
+                you have come to the right place! With Lite's bookmark manager you can organize
+                and access your bookmark efficiently. You can set your own tags and nicks for lightning fast access.</p>
+            </div><!--end of tab-pane-->
+
+          <div class="tab-pane" id="tab6">
+            <img src="images/webPanels.png" alt="Web Panels" class="pull-left">
+            <p>Web Panels allow you to view websites as a panel on the sidebar of your Lite browser.
+               Read news, follow conversations on social media, chat with your friends and much more,
+               while using the main browser window separately. It’s the next best thing to having a “Boss Button” on your browser.</p>
+          </div><!--end of tab-pane-->
+        </div><!--end of tab-content-->
+        </div><!--end of tabbable-->
+      </div><!-- end of col-sm-12-->
+    </div><!-- end of row-->
+    <hr>
     <div class="row" id="press_heading">
       <div class="col-12">
         <h2>What the Press is saying</h2>
@@ -249,10 +314,97 @@
       </div><!--end of col-12-->
 
     </div><!--end of download_panel-->
-  </div><!--end of main container-->
+  </div><!--end of main container-fluid-->
+
+  <div class="modal fade" id="createAccountModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-user"></span>Create New Account</h4>
+      </div><!--end of modal header-->
+      <div class="modal-body">
+        <form action="" class="form-horizontal">
+          <div class="form-group">
+            <label class="col-lg-2 control-label" for="inputEmail">Email</label>
+            <div class="col-lg-10">
+              <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-2 control-label" for="inputName">Name</label>
+            <div class="col-lg-10">
+              <input class="form-control" id="inputName" placeholder="Name" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-2 control-label" for="inputPassword">Password</label>
+            <div class="col-lg-10">
+              <input class="form-control" id="inputPassword" placeholder="Password" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-2 control-label" for="confirmPassword">Confirm Password</label>
+            <div class="col-lg-10">
+              <input class="form-control" id="confirmPassword" placeholder="Confirm Password" type="text">
+            </div>
+          </div>
+        </form>
+
+      </div><!--end of modal body-->
+
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" type="button">Cancel</button> <button class="btn btn-primary" type="button">Create</button>
+      </div><!-- end modal-footer -->
+    </div><!--end of modal content-->
+  </div><!--end of modal-dialog-->
+  </div><!--end of createAccountModal -->
 
 <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2 pull-left">
+        <p>Lite!</p>
+        <ul class="unstyled">
+          <li>Features</li>
+          <li>Download</li>
+          <li>Report a Bug</li>
+        </ul>
+      </div><!--end of col-sm-2-->
 
+      <div class="col-sm-2 pull-left">
+        <p>About</p>
+        <ul class="unstyled">
+          <li>Our Story</li>
+          <li>Team</li>
+        </ul>
+      </div><!--end of col-sm-2-->
+
+      <div class="col-sm-2 pull-left">
+        <p>Support</p>
+        <ul class="unstyled">
+          <li>Help</li>
+          <li>Contact</li>
+        </ul>
+      </div><!--end of col-sm-2-->
+
+      <div class="col-sm-2 pull-left">
+        <p>Press and Media</p>
+        <ul class="unstyled">
+          <li>Press Kit</li>
+          <li>Press Releases</li>
+        </ul>
+      </div><!--end of col-sm-2-->
+
+      <div class="col-sm-4 pull-left">
+        <p>Follow us around the Web</p>
+        <span class="fa fa-facebook"></span>
+      </div><!--end of col-sm-4-->
+    </div><!--end of row-->
+  </div><!--end of container-->
 </footer> <!--end of footer-->
 
   <!-- All Javascript at the bottom of the page for faster page loading -->
