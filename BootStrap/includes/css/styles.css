@@ -136,15 +136,20 @@ body {
     Tab-Content
     ---------------------------------------*/
     .tab-pane img {
-      width:15%;
+      width:12%;
       height:auto;
       margin:15px;
     }
 
-    .tab-pane p {
-      overflow: hidden;
+    .tab-pane h4 {
+
       font-size:18px;
       margin-top:50px;
+      text-align: justify;
+    }
+
+    .tab-pane div {
+      overflow: hidden;
     }
 
   /*---------------------------------------
@@ -174,7 +179,23 @@ body {
 Footer
   ---------------------------------------*/
 footer {
-  background-color: grey;
+  background-color: rgb(238,238,238);
+}
+
+footer ul {
+  padding-left: 0px;
+}
+
+footer li{
+  list-style: none;
+  color: rgb(119,119,119);
+}
+
+footer h4 {
+  margin-bottom: 2px;
+  color: rgb(119,119,119);
+  text-decoration: underline;
+
 }
 /* --------------------------------------
    Global Styles
