@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services Page</title>
+
+  <!-- Mobile viewport optimized -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link href="includes/css/bootstrap-social.css" rel="stylesheet">
+
+
+  <!-- Custom CSS -->
+  <link href="includes/css/services_styles.css" rel="stylesheet">
+  <link href="includes/css/font-awesome.min.css" rel="stylesheet">
+  <link href="includes/css/font-awesome.css" rel="stylesheet">
+
+  <!-- Include Modernizr in the head, before any other Javascript -->
+  <script src="includes/js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+  <div class="container" id="main">
+    <div class="navbar navbar-fixed-top">
+      <div class="container">
+        <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a href="/" class="navbar-brand"><h4 id="logo_text"><img src="images/logo.png" alt="Lite! Browser">  Lite! Browser</h4></a>
+
+        <div class="nav-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Start</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Team</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Blog1</a></li>
+                <li><a href="#">Blog2</a></li>
+                <li><a href="#">Blog3</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">More Items</li>
+                <li><a href="#">Blog4</a></li>
+                <li><a href="#">Blog5</a></li>
+              </ul>
+            </li><!--end of Blog List-->
+          </ul><!-- end of navbar list-->
+
+          <form action="" class="navbar-form pull-left">
+            <input type="text" class="form-control" id="main_search" placeholder="Search this site...">
+            <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+          </form><!--end of search form-->
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-user"></span>My Account<strong class="caret"></strong>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-wrench"></span> Setings</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-off"></span> Sign Out</a></li>
+                <li class="divider"></li>
+                <li><a href="#createAccountModal" role="button" data-toggle="modal"><span class="glyphicon glyphicon-user"></span>Create Account</a></li>
+              </ul>
+            </li>
+          </ul><!--end of my account list-->
+        </div><!--end of navbar collapse-->
+      </div><!--end of container-fluid-->
+    </div><!-- end of nav bar-->
+
+    <h2 id="features_heading">Features</h2>
+
+    <div class="row" id="features_container">
+      <div class="col-12 feature" id="feature1">
+        <div class="col-sm-4 pull-left well">
+          <h3 class="desc_heading">Experience a smarter web</h3>
+          <div class="desc">
+            <p>Get the best of Google when you browse with Lite!. Lite! and Google work together to
+              bring you more relevant suggestions and features across Google products including Voice Search and Google Now.
+              Enable Google Now. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tenetur repudiandae vitae nostrum minima,
+               quas sapiente veritatis quidem error! Consequuntur non ut natus voluptates amet eos, rerum nulla minus perspiciatis.</p>
+          </div>
+        </div><!--end of description-->
+        <div class="col-sm-8 pull-right">
+          <img src="images/smarter_web.jpg" alt="Experience a smarter web" class="pull-right">
+        </div><!--end of pic-->
+      </div><!--end of feature-->
+      <hr>
+
+      <div class="col-12 feature" id="feature2">
+        <div class="col-sm-8 pull-left">
+          <img src="images/pickup.jpg" alt="Experience a smarter web" class="pull-left">
+        </div><!--end of pic-->
+        <div class="col-sm-4 pull-right well">
+          <h3 class="desc_heading">Pick up where you left off</h3>
+          <p>Lite! brings your open tabs, bookmarks and recent searches from your computer to your phone
+            or tablet, and vice versa. That way you have your web on all of your devices. Just sign in on
+            your other devices to start syncing. Learn more. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Quaerat qui ipsa sapiente id, labore veritatis, aperiam atque! Repellat consequatur perferendis iusto
+            assumenda saepe placeat esse et quo, temporibus, nam voluptatibus.</p>
+        </div><!--end of description-->
+      </div><!--end of feature-->
+      <hr>
+
+      <div class="col-12 feature" id="feature3">
+        <div class="col-sm-4 pull-left well">
+          <h3 class="desc_heading">Browse faster</h3>
+          <div class="desc">
+              <h4>Search Instantly</h4>
+              <p>Search and navigate from the same box. Choose from results and suggestions that appear as you type,
+                including your recent searches and visited websites, so you can get to what you want in a snap.
+                 Search from the omnibox </p>
+          </div>
+        </div><!--end of description-->
+        <div class="col-sm-8 pull-right">
+          <img src="images/browse_faster.jpg" alt="Browse Faster" class="pull-right">
+        </div><!--end of pic-->
+      </div><!--end of feature-->
+      <hr>
+
+      <div class="col-12 feature" id="feature4">
+        <div class="col-sm-8 pull-left">
+          <img src="images/make_yours.jpg" alt="Make Lite! yours" class="pull-left">
+        </div><!--end of pic-->
+        <div class="col-sm-4 pull-right well">
+          <h3 class="desc_heading">Make Lite! yours</h3>
+          <p>Browse just the way you'd like with Lite! themes, apps and extentions.
+             Get straight to your favorite web destinations with bookmarks and start pages.
+             Once you've set up Lite!, your customizations will be kept in sync across all of your devices. Start customizing
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, minima, non distinctio ea amet libero accusantium
+             natus at nam quasi perspiciatis cupiditate odit ex rem veniam est eos qui deserunt.</p>
+        </div><!--end of description-->
+      </div><!--end of feature-->
+      <hr>
+
+
+
+    <div class="row" id="download_panel">
+      <div class="col-12">
+        <div class="alert alert-success alert-block fade in" id="successAlert1">
+          <button class="close" type="button" data-dismiss="alert">&times;</button>
+          <h4>Success</h4>
+          <p>Thanks for choosing the Best Browser of the universe!. Your download will start in a moment...</p>
+        </div><!-- end of alert-->
+
+        <div class="well">
+          <div class="page-header">
+            <h1>Lite! Browser <small> -Do more on the web.</small></h1>
+            <p class="lead">Download our free browser for faster, easier and safer web surfing.</p>
+            <a href="" class="btn btn-large btn-primary" id="download_alert1">Download Lite!<small> Beta for Windows</small></a>
+            <a href="" class="btn btn-large btn-link"><small>Click here for other OS</small></a>
+          </div><!--end of page-header-->
+        </div><!-- end of well-->
+      </div><!--end of col-12-->
+    </div><!--end of download_panel-->
+  </div><!--end of main container-->
+
+  <div class="modal fade" id="createAccountModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-user"></span>Create New Account</h4>
+      </div><!--end of modal header-->
+      <div class="modal-body">
+        <form action="" class="form-horizontal">
+          <div class="form-group">
+            <label class="col-lg-2 control-label" for="inputEmail">Email</label>
+            <div class="col-lg-10">
+              <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-2 control-label" for="inputName">Name</label>
+            <div class="col-lg-10">
+              <input class="form-control" id="inputName" placeholder="Name" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-2 control-label" for="inputPassword">Password</label>
+            <div class="col-lg-10">
+              <input class="form-control" id="inputPassword" placeholder="Password" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-2 control-label" for="confirmPassword">Confirm Password</label>
+            <div class="col-lg-10">
+              <input class="form-control" id="confirmPassword" placeholder="Confirm Password" type="text">
+            </div>
+          </div>
+        </form>
+
+      </div><!--end of modal body-->
+
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" type="button">Cancel</button> <button class="btn btn-primary" type="button">Create</button>
+      </div><!-- end modal-footer -->
+    </div><!--end of modal content-->
+  </div><!--end of modal-dialog-->
+  </div><!--end of createAccountModal -->
+</div>
+
+  <!-- All Javascript at the bottom of the page for faster page loading -->
+
+	<!-- First try for the online version of jQuery-->
+	<script src="http://code.jquery.com/jquery.js"></script>
+
+	<!-- If no online access, fallback to our hardcoded version of jQuery -->
+	<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+
+	<!-- Bootstrap JS -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="includes/js/services_script.js"></script>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <h4>Lite!</h4>
+          <ul>
+            <a href="#"><li>Features</li></a>
+            <a href="#"><li>Download</li></a>
+            <a href="#"><li>Report a Bug</li></a>
+          </ul>
+        </div><!--end of col-sm-2-->
+
+        <div class="col-sm-2">
+          <h4>About</h4>
+          <ul class="unstyled">
+            <a href="#"><li>Our Story</li></a>
+            <a href="#"><li>Team</li></a>
+          </ul>
+        </div><!--end of col-sm-2-->
+
+        <div class="col-sm-2">
+          <h4>Support</h4>
+          <ul class="unstyled">
+            <a href="#"><li>Help</li></a>
+            <a href="#"><li>Contact</li></a>
+          </ul>
+        </div><!--end of col-sm-2-->
+
+        <div class="col-sm-2">
+          <h4>Press and Media</h4>
+          <ul class="unstyled">
+            <a href="#"><li>Press Kit</li></a>
+            <a href="#"><li>Press Releases</li></a>
+          </ul>
+        </div><!--end of col-sm-2-->
+
+        <div class="col-sm-4">
+          <h4>Follow us around the Web</h4>
+          <a href="#"><span class="fa fa-facebook-square fa-3x"></span></a>
+          <a href="#"><span class="fa fa-twitter-square fa-3x"></span></a>
+          <!--<span class="fa fa-google fa-3x"></span>-->
+          <a href="#"><span class="fa fa-linkedin-square fa-3x"></span></a>
+          <a href="#"><span class="fa fa-instagram fa-3x"></span></a>
+        </div><!--end of col-sm-4-->
+      </div><!--end of row-->
+    </div><!--end of container-->
+  </footer> <!--end of footer-->
+</body>
+
+
+</html>

@@ -1,0 +1,118 @@
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+body {
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+   #main_search {
+     width:200px;
+   }
+
+   .navbar-brand img {
+     width:36px;
+     height:36px;
+   }
+
+   .navbar-brand h4 {
+     margin-top: 5px;
+     margin-bottom: 5px;
+     margin-left: 0px;
+     margin-right: 0px;
+   }
+
+   .navbar-brand {
+     padding-top: 2px;
+     padding-bottom: 2px;
+     padding-left: 20px;
+     padding-right: 20px;
+   }
+/* --------------------------------------
+  feature_heading
+-------------------------------------- */
+#features_heading {
+  margin-top:70px !important;
+  text-align: center;
+  color: #ef3939;
+  margin-bottom: 40px;
+}
+
+/* --------------------------------------
+  Features
+-------------------------------------- */
+.desc_heading {
+  color: #ef3939;
+  margin-top: 0px;
+}
+
+.desc {
+  text-align: justify;
+}
+
+#features_container img {
+  overflow: hidden;
+  width:85%;
+  height:auto;
+
+}
+
+.feature {
+  margin-bottom: 50px;
+}
+
+#feature3 img {
+  margin-top: 20px;
+}
+
+#feature4 .well {
+  margin-top: 100px;
+}
+
+
+
+
+/* --------------------------------------
+  Global
+-------------------------------------- */
+hr {
+  overflow: hidden;
+}
+
+/*---------------------------------------
+Footer
+  ---------------------------------------*/
+footer {
+  background-color: rgb(238,238,238);
+}
+
+footer ul {
+  padding-left: 0px;
+}
+
+footer li{
+  list-style: none;
+  color: rgb(119,119,119);
+}
+
+footer h4 {
+  margin-bottom: 2px;
+  color: rgb(119,119,119);
+  text-decoration: underline;
+
+}
+
+/* --------------------------------------
+  Alert
+-------------------------------------- */
+.alert {
+  margin-top: 20px;
+  display: none;
+}
+
+.well {
+  margin:20px 0;
+}
