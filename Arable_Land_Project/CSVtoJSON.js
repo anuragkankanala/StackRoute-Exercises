@@ -18,34 +18,34 @@ var continentCodeOceania="OC";
 var continentCodeEurope="EU";
 
 //Required Objects to be converted to JSON
-var reqPercentLandAreaIndia = {};
-var reqHectaresPerPersonIndia = {};
-var reqTotalHectaresIndia = {};
-var reqPercentLandAreaAfrica2010 = {};
-var reqTotalHectaresByContinent = {
-  AF : {},
-  AS : {},
-  EU : {},
-  NA : {},
-  OC : {},
-  SA : {}
-};
+var reqPercentLandAreaIndia = [];
+var reqHectaresPerPersonIndia = [];
+var reqTotalHectaresIndia = [];
+var reqPercentLandAreaAfrica2010 = [];
+var reqTotalHectaresByContinentAF=[];
+var reqTotalHectaresByContinentAS=[];
+var reqTotalHectaresByContinentEU=[];
+var reqTotalHectaresByContinentNA=[];
+var reqTotalHectaresByContinentOC=[];
+var reqTotalHectaresByContinentSA=[];
 
 //Initialise finction for Plot3
-function init(customObject) {
-  for(var index=1960;index<2016;index++) {
-    customObject[index]=0;
+function init(customArray) {
+  for(var ijk=(1960-1960);ijk<(2016-1960);ijk++) {
+    customArray[ijk]={};
+    customArray[ijk]["VALUE"]=0;
   }
 }
 
 //Cleanup function- Remove keys with value 0
-function cleanUp(customObject) {
-  for(var counter in customObject) {
-    if(customObject[counter]===0) {
-      delete customObject[counter];
+function cleanUp(customArray) {
+  for(var jkl in customArray ) {
+    if(parseFloat(customArray[jkl]["VALUE"])===0) {
+      customArray.splice(jkl,1);
     }
   }
 }
+
 
 //Reading countries.csv file to add country continent key value pairs
 var instream1 = fs.createReadStream('countries.csv');
@@ -69,12 +69,12 @@ r1.on('line', function(line) {
 
 r1.on('close', function() {
   //Initialising Plot3 objects to 0
-  init(reqTotalHectaresByContinent.AF);
-  init(reqTotalHectaresByContinent.AS);
-  init(reqTotalHectaresByContinent.EU);
-  init(reqTotalHectaresByContinent.NA);
-  init(reqTotalHectaresByContinent.OC);
-  init(reqTotalHectaresByContinent.SA);
+  init(reqTotalHectaresByContinentAF);
+  init(reqTotalHectaresByContinentAS);
+  init(reqTotalHectaresByContinentEU);
+  init(reqTotalHectaresByContinentNA);
+  init(reqTotalHectaresByContinentOC);
+  init(reqTotalHectaresByContinentSA);
 });
 
 //Reading WDI_Data.csv file to create required Objects
@@ -98,7 +98,10 @@ r2.on('line', function(line) {
   if(String(line).split(",")[1]===countryCodeIndia && String(line).split(",")[3]===percentLandAreaCode) {
     for(var index1=4;index1<headers2.length;index1++) {
       if(String(line).split(",")[index1] !== "") {
-        reqPercentLandAreaIndia [headers2[index1]] = parseFloat((String(line).split(",")[index1]));
+        var tempObj1 = {};
+        tempObj1["YEAR"] = headers2[index1];
+        tempObj1["VALUE"] = parseFloat((String(line).split(",")[index1]));
+        reqPercentLandAreaIndia.push(tempObj1);
       }
     }
   }
@@ -107,7 +110,10 @@ r2.on('line', function(line) {
   if(String(line).split(",")[1]===countryCodeIndia && String(line).split(",")[3]===hectaresPerPersonCode) {
     for(var index2=4;index2<headers2.length;index2++) {
       if(String(line).split(",")[index2] !== "") {
-        reqHectaresPerPersonIndia [headers2[index2]] = parseFloat((String(line).split(",")[index2]));
+        var tempObj2 = {};
+        tempObj2["YEAR"] = headers2[index2];
+        tempObj2["VALUE"] = parseFloat((String(line).split(",")[index2]));
+        reqHectaresPerPersonIndia.push(tempObj2);
       }
     }
   }
@@ -116,7 +122,10 @@ r2.on('line', function(line) {
   if(String(line).split(",")[1]===countryCodeIndia && String(line).split(",")[3]===totalHectaresCode) {
     for(var index3=4;index3<headers2.length;index3++) {
       if(String(line).split(",")[index3] !== "") {
-        reqTotalHectaresIndia [headers2[index3]] = parseFloat((String(line).split(",")[index3]));
+        var tempObj3 = {};
+        tempObj3["YEAR"] = headers2[index3];
+        tempObj3["VALUE"] = parseFloat((String(line).split(",")[index3]));
+        reqTotalHectaresIndia.push(tempObj3);
       }
     }
   }
@@ -124,7 +133,10 @@ r2.on('line', function(line) {
   //Arable land (% of land area)" for African countries in the year 2010
   if(countryContinent[String(line).split(",")[1]]===continentCodeAfrica && String(line).split(",")[3]===percentLandAreaCode) {
     if(String(line).split(",")[54]!=="") {
-      reqPercentLandAreaAfrica2010[String(line).split(",")[1]] = parseFloat(String(line).split(",")[54]);
+      tempObj4 = {};
+      tempObj4["COUNTRY"] = String(line).split(",")[1];
+      tempObj4["VALUE"] = parseFloat(String(line).split(",")[54]);
+      reqPercentLandAreaAfrica2010.push(tempObj4);
     }
   }
 
@@ -133,7 +145,8 @@ r2.on('line', function(line) {
   if(countryContinent[String(line).split(",")[1]]===continentCodeAfrica && String(line).split(",")[3]===totalHectaresCode) {
     for(var index4=4;index4<headers2.length;index4++) {
       if(String(line).split(",")[index4]!=="") {
-        reqTotalHectaresByContinent[continentCodeAfrica][headers2[index4]]+=parseFloat(String(line).split(",")[index4]);
+        reqTotalHectaresByContinentAF[(headers2[index4]-1960)]["YEAR"] = headers2[index4];
+        reqTotalHectaresByContinentAF[(headers2[index4]-1960)]["VALUE"]+=parseFloat(String(line).split(",")[index4]);
       }
     }
   }
@@ -142,7 +155,8 @@ r2.on('line', function(line) {
   if(countryContinent[String(line).split(",")[1]]===continentCodeAsia && String(line).split(",")[3]===totalHectaresCode) {
     for(var index5=4;index5<headers2.length;index5++) {
       if(String(line).split(",")[index5]!=="") {
-        reqTotalHectaresByContinent[continentCodeAsia][headers2[index5]]+=parseFloat(String(line).split(",")[index5]);
+        reqTotalHectaresByContinentAS[(headers2[index5]-1960)]["YEAR"] = headers2[index5];
+        reqTotalHectaresByContinentAS[(headers2[index5]-1960)]["VALUE"]+=parseFloat(String(line).split(",")[index5]);
       }
     }
   }
@@ -151,7 +165,8 @@ r2.on('line', function(line) {
   if(countryContinent[String(line).split(",")[1]]===continentCodeEurope && String(line).split(",")[3]===totalHectaresCode) {
     for(var index6=4;index6<headers2.length;index6++) {
       if(String(line).split(",")[index6]!=="") {
-        reqTotalHectaresByContinent[continentCodeEurope][headers2[index6]]+=parseFloat(String(line).split(",")[index6]);
+        reqTotalHectaresByContinentEU[(headers2[index6]-1960)]["YEAR"] = headers2[index6];
+        reqTotalHectaresByContinentEU[(headers2[index6]-1960)]["VALUE"]+=parseFloat(String(line).split(",")[index6]);
       }
     }
   }
@@ -160,7 +175,8 @@ r2.on('line', function(line) {
   if(countryContinent[String(line).split(",")[1]]===continentCodeNorthAmerica && String(line).split(",")[3]===totalHectaresCode) {
     for(var index7=4;index7<headers2.length;index7++) {
       if(String(line).split(",")[index7]!=="") {
-        reqTotalHectaresByContinent[continentCodeNorthAmerica][headers2[index7]]+=parseFloat(String(line).split(",")[index7]);
+        reqTotalHectaresByContinentNA[(headers2[index7]-1960)]["YEAR"] = headers2[index7];
+        reqTotalHectaresByContinentNA[(headers2[index7]-1960)]["VALUE"]+=parseFloat(String(line).split(",")[index7]);
       }
     }
   }
@@ -169,7 +185,8 @@ r2.on('line', function(line) {
   if(countryContinent[String(line).split(",")[1]]===continentCodeOceania && String(line).split(",")[3]===totalHectaresCode) {
     for(var index8=4;index8<headers2.length;index8++) {
       if(String(line).split(",")[index8]!=="") {
-        reqTotalHectaresByContinent[continentCodeOceania][headers2[index8]]+=parseFloat(String(line).split(",")[index8]);
+        reqTotalHectaresByContinentOC[(headers2[index8]-1960)]["YEAR"] = headers2[index8];
+        reqTotalHectaresByContinentOC[(headers2[index8]-1960)]["VALUE"]+=parseFloat(String(line).split(",")[index8]);
       }
     }
   }
@@ -178,7 +195,8 @@ r2.on('line', function(line) {
   if(countryContinent[String(line).split(",")[1]]===continentCodeSouthAmerica && String(line).split(",")[3]===totalHectaresCode) {
     for(var index9=4;index9<headers2.length;index9++) {
       if(String(line).split(",")[index9]!=="") {
-        reqTotalHectaresByContinent[continentCodeSouthAmerica][headers2[index9]]+=parseFloat(String(line).split(",")[index9]);
+        reqTotalHectaresByContinentSA[(headers2[index9]-1960)]["YEAR"] = headers2[index9];
+        reqTotalHectaresByContinentSA[(headers2[index9]-1960)]["VALUE"]+=parseFloat(String(line).split(",")[index9]);
       }
     }
   }
@@ -193,11 +211,16 @@ r2.on('close', function() {
   fs.writeFile('reqHectaresPerPersonIndia.json', JSON.stringify(reqHectaresPerPersonIndia,null,2));
   fs.writeFile('reqTotalHectaresIndia.json', JSON.stringify(reqTotalHectaresIndia,null,2));
   fs.writeFile('reqPercentLandAreaAfrica2010.json', JSON.stringify(reqPercentLandAreaAfrica2010,null,2));
-  cleanUp(reqTotalHectaresByContinent.AF);
-  cleanUp(reqTotalHectaresByContinent.AS);
-  cleanUp(reqTotalHectaresByContinent.EU);
-  cleanUp(reqTotalHectaresByContinent.NA);
-  cleanUp(reqTotalHectaresByContinent.OC);
-  cleanUp(reqTotalHectaresByContinent.SA);
-  fs.writeFile('reqTotalHectaresByContinent.json', JSON.stringify(reqTotalHectaresByContinent,null,2));
+  cleanUp(reqTotalHectaresByContinentAF);
+  cleanUp(reqTotalHectaresByContinentAS);
+  cleanUp(reqTotalHectaresByContinentEU);
+  cleanUp(reqTotalHectaresByContinentNA);
+  cleanUp(reqTotalHectaresByContinentOC);
+  cleanUp(reqTotalHectaresByContinentSA);
+  fs.writeFile('reqTotalHectaresByContinentAF.json', JSON.stringify(reqTotalHectaresByContinentAF,null,2));
+  fs.writeFile('reqTotalHectaresByContinentAS.json', JSON.stringify(reqTotalHectaresByContinentAS,null,2));
+  fs.writeFile('reqTotalHectaresByContinentEU.json', JSON.stringify(reqTotalHectaresByContinentEU,null,2));
+  fs.writeFile('reqTotalHectaresByContinentNA.json', JSON.stringify(reqTotalHectaresByContinentNA,null,2));
+  fs.writeFile('reqTotalHectaresByContinentOC.json', JSON.stringify(reqTotalHectaresByContinentOC,null,2));
+  fs.writeFile('reqTotalHectaresByContinentSA.json', JSON.stringify(reqTotalHectaresByContinentSA,null,2));
 });

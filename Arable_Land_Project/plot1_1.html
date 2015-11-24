@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arable land (% of land area)</title>
+  <script src="../d3/d3.min.js" charset="utf-8"></script>
+  <style>
+    .bar {
+      fill:steelblue;
+    }
+
+    .bar:hover {
+      fill:brown;
+    }
+
+    .axis {
+      font:10px sans-serif;
+    }
+
+    .axis path, .axis line {
+      fill:none;
+      stroke:#000;
+      shape-rendering:crispEdges;
+    }
+
+    svg {
+      margin-left:80px;
+      margin-right: auto;
+      margin-top:80px;
+    }
+
+    body h1{
+      text-align: center;
+      font-family: sans-serif;
+      color:grey;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    //Defining dimensions of graph container
+
+    var heading = d3.select("body").append("h1").text("Arable land (% of land area)-INDIA");
+
+    var margin = {top: 40, right: 40, bottom: 80, left: 40},
+        width = 1200 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    //Define Year Format
+    var parseYear = d3.time.format("%Y").parse;
+
+    //Setting the ranges
+    var x = d3.scale.ordinal().rangeRoundBands([0,width],0.15);
+    var y = d3.scale.linear().range([height,0]);
+
+    //Defining the axes
+
+    var xAxis = d3.svg.axis()
+                      .scale(x)
+                      .orient("bottom");
+
+    var yAxis = d3.svg.axis()
+                      .scale(y)
+                      .orient("left")
+                      .ticks(10);
+
+    //Adding the svg element
+    var svg = d3.select("body").append("svg")
+                .attr("width", width+margin.left+margin.right)
+                .attr("height",height+margin.top+margin.bottom)
+                .append("g")
+                .attr("transform", "translate(" +margin.left+"," + margin.top +")");
+
+    //Loading the Data
+    d3.json("reqPercentLandAreaIndia.json", function(error, data){
+      data.forEach(function(d){
+        d.Year = d.YEAR;
+        d.value = parseFloat(d.VALUE);
+      });
+
+      //Scale the range of Data
+      x.domain(data.map(function(d){return d.Year;}));
+      y.domain([0,d3.max(data,function(d){return d.VALUE;})]);
+
+      //Add axis
+      svg.append("g")
+        .attr("class","x axis")
+        .attr("transform", "translate(0,"+height+")")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor","end")
+        .attr("dx", "-0.8em")
+        .attr("dy", "-0.6em")
+        .attr("transform", "rotate(-90)");
+
+      svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -25)
+        .attr("x", -40)
+        //.attr("x",-5)
+        //.attr("dy", "0.15em")
+        .style("text-anchor", "end")
+        .attr("font-size", "18")
+        .text("Arable land (% of land area)");
+
+      //Adding Bar char
+      svg.selectAll("bar")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x",function(d){return x(d.Year);})
+        .attr("width",x.rangeBand())
+        .attr("y",function(d){return y(d.VALUE);})
+        .attr("height",function(d){return height-y(d.VALUE);});
+    });
+  </script>
+</body>
+</html>
