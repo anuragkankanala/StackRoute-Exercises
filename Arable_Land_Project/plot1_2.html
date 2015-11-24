@@ -1,38 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Arable land (hectares per person)</title>
   <script src="../d3/d3.min.js" charset="utf-8"></script>
-  <style>
-    .bar {
-      fill:steelblue;
-    }
-
-    .bar:hover {
-      fill:brown;
-    }
-
-    .axis {
-      font:10px sans-serif;
-    }
-
-    .axis path, .axis line {
-      fill:none;
-      stroke:#000;
-      shape-rendering:crispEdges;
-    }
-
-    svg {
-      margin-left:80px;
-      margin-right: auto;
-      margin-top:80px;
-    }
-  </style>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <link rel="stylesheet" href="../css/plot1_2.css">
 </head>
+
 <body>
   <script>
     //Defining dimensions of graph container
+    var heading = d3.select("body").append("h1").text("Arable land (hectares per person)-INDIA");
+    var axesDesc = d3.select("body").append("h3").text("Scale- X-Axis: Years, Y-Axis: Hectares per Person");
+
+    //Define margins for the svg container
     var margin = {top: 40, right: 40, bottom: 80, left: 40},
         width = 1200 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
@@ -45,7 +28,6 @@
     var y = d3.scale.linear().range([height,0]);
 
     //Defining the axes
-
     var xAxis = d3.svg.axis()
                       .scale(x)
                       .orient("bottom");
@@ -55,6 +37,14 @@
                       .orient("left")
                       .ticks(10);
 
+    //Define tip()
+    var tip = d3.tip()
+              .attr('class', 'd3-tip')
+              .offset([-10, 0])
+              .html(function(d) {
+                return "<strong>Value:</strong> <span style='color:red'>" + d.value + "</span>";
+              });
+
     //Adding the svg element
     var svg = d3.select("body").append("svg")
                 .attr("width", width+margin.left+margin.right)
@@ -62,8 +52,10 @@
                 .append("g")
                 .attr("transform", "translate(" +margin.left+"," + margin.top +")");
 
+    svg.call(tip);
+
     //Loading the Data
-    d3.json("reqHectaresPerPersonIndia.json", function(error, data){
+    d3.json("../json/reqHectaresPerPersonIndia.json", function(error, data){
       data.forEach(function(d){
         d.Year = d.YEAR;
         d.value = parseFloat(d.VALUE);
@@ -105,7 +97,9 @@
         .attr("x",function(d){return x(d.Year);})
         .attr("width",x.rangeBand())
         .attr("y",function(d){return y(d.VALUE);})
-        .attr("height",function(d){return height-y(d.VALUE);});
+        .attr("height",function(d){return height-y(d.VALUE);})
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide);
     });
   </script>
 </body>

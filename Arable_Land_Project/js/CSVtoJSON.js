@@ -206,6 +206,7 @@ r2.on('line', function(line) {
 
 
 
+
 r2.on('close', function() {
   fs.writeFile('reqPercentLandAreaIndia.json', JSON.stringify(reqPercentLandAreaIndia,null,2));
   fs.writeFile('reqHectaresPerPersonIndia.json', JSON.stringify(reqHectaresPerPersonIndia,null,2));
@@ -217,6 +218,12 @@ r2.on('close', function() {
   cleanUp(reqTotalHectaresByContinentNA);
   cleanUp(reqTotalHectaresByContinentOC);
   cleanUp(reqTotalHectaresByContinentSA);
+  reqTotalHectaresByContinentAF = {data:reqTotalHectaresByContinentAF, name:"Africa"};
+  reqTotalHectaresByContinentAS = {data:reqTotalHectaresByContinentAS, name:"Asia"};
+  reqTotalHectaresByContinentEU = {data:reqTotalHectaresByContinentEU, name:"Europe"};
+  reqTotalHectaresByContinentNA = {data:reqTotalHectaresByContinentNA, name:"North America"};
+  reqTotalHectaresByContinentOC = {data:reqTotalHectaresByContinentOC, name:"Oceania"};
+  reqTotalHectaresByContinentSA = {data:reqTotalHectaresByContinentSA, name:"South America"};
   fs.writeFile('reqTotalHectaresByContinentAF.json', JSON.stringify(reqTotalHectaresByContinentAF,null,2));
   fs.writeFile('reqTotalHectaresByContinentAS.json', JSON.stringify(reqTotalHectaresByContinentAS,null,2));
   fs.writeFile('reqTotalHectaresByContinentEU.json', JSON.stringify(reqTotalHectaresByContinentEU,null,2));

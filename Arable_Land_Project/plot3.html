@@ -2,38 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Arable land (hectares)" aggregated by continent over the years</title>
+  <title>Arable land (hectares) aggregated by continent over the years</title>
   <script src="../d3/d3.min.js" charset="utf-8"></script>
-  <style>
-  .bar {
-    fill:steelblue;
-  }
-
-  .bar:hover {
-    fill:brown;
-  }
-
-  .axis {
-    font:10px sans-serif;
-  }
-
-  .axis path, .axis line {
-    fill:none;
-    stroke:#000;
-    shape-rendering:crispEdges;
-  }
-
-  svg {
-    margin-left:80px;
-    margin-right: auto;
-    margin-top:80px;
-  }
-  </style>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <link rel="stylesheet" href="../css/plot3.css">
 </head>
 <body>
   <script>
   //Defining dimensions of graph container
-  var margin = {top: 40, right: 40, bottom: 80, left: 80},
+  var heading = d3.select("body").append("h1").text("Arable land (hectares) aggregated by continent over the years");
+  var axesDesc = d3.select("body").append("h3").text("Scale- X-Axis: Years, Y-Axis: Hectares");
+
+  var margin = {top: 40, right: 40, bottom: 80, left: 40},
       width = 1200 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
 
@@ -54,24 +34,37 @@
                     .orient("left")
                     .ticks(10);
 
+  var tip = d3.tip()
+              .attr('class', 'd3-tip')
+              .offset([-10, 0])
+              .html(function(d) {
+                 return "<strong>Value:</strong> <span style='color:red'>" + d.value + "</span>";
+               });
+
   //Adding the svg elements 6 Graphs
   var svg = [];
   for(var ijk=0;ijk<6;ijk++) {
 
     //Loading the data
-    var jsonFileName;
-    if(ijk===0) {jsonFileName = "reqTotalHectaresByContinentAF.json";}
-    else if(ijk===1) {jsonFileName = "reqTotalHectaresByContinentAS.json";}
-    else if(ijk===2) {jsonFileName = "reqTotalHectaresByContinentEU.json";}
-    else if(ijk===3) {jsonFileName = "reqTotalHectaresByContinentNA.json";}
-    else if(ijk===4) {sonFileName = "reqTotalHectaresByContinentOC.json";}
-    else  {jsonFileName = "reqTotalHectaresByContinentSA.json";}
+    var jsonFileName,continentName;
+    if(ijk===0) {jsonFileName = "../json/reqTotalHectaresByContinentAF.json",continentName="Africa";}
+    else if(ijk===1) {jsonFileName = "../json/reqTotalHectaresByContinentAS.json",continentName="Asia";}
+    else if(ijk===2) {jsonFileName = "../json/reqTotalHectaresByContinentEU.json",continentName="Europe";}
+    else if(ijk===3) {jsonFileName = "../json/reqTotalHectaresByContinentNA.json",continentName="North America";}
+    else if(ijk===4) {jsonFileName = "../json/reqTotalHectaresByContinentOC.json",continentName="Oceania";}
+    else  {jsonFileName = "../json/reqTotalHectaresByContinentSA.json",continentName="South America";}
+
 
     d3.json(jsonFileName,function(data){
-      data.forEach(function(d){
+
+      data.data.forEach(function(d){
         d.year = d.YEAR;
         d.value = parseFloat(d.VALUE);
+
       });
+
+      d3.select("body").append("h2").text(data.name);
+
 
 
       svg = d3.select("body").append("svg")
@@ -80,9 +73,11 @@
                       .append("g")
                       .attr("transform","translate("+margin.left+","+margin.top+")");
 
+      svg.call(tip);
+
       //Scale the range of data
-      x.domain(data.map(function(d){return d.year;}));
-      y.domain([0,d3.max(data,function(d){return d.value;})]);
+      x.domain(data.data.map(function(d){return d.year;}));
+      y.domain([0,d3.max(data.data,function(d){return d.value;})]);
 
       //debugger;
       //Add axis
@@ -109,16 +104,22 @@
 
       //Adding bars
       svg.selectAll("bar")
-        .data(data)
+        .data(data.data)
         .enter().append("rect")
         .attr("class", "bar")
         .attr("x",function(d){return x(d.year);})
         .attr("width",x.rangeBand())
         .attr("y",function(d){return y(d.value);})
         .attr("height",function(d){return height-y(d.value);})
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide);
+
+
 
     });
+
   }
+
   </script>
 
 </body>
