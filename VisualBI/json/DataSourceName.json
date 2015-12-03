@@ -1,0 +1,13 @@
+[
+  {
+    "DataSourceName": "Pentaho",
+    "DataSourceDescription": "Pentaho BI Platform Datasources",
+    "URL": "/pentaho/Xmla",
+    "DataSourceInfo": "Pentaho",
+    "ProviderName": "PentahoXMLA",
+    "ProviderType": [
+      "MDP"
+    ],
+    "AuthenticationMode": "Unauthenticated"
+  }
+]
