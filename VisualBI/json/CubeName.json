@@ -1,0 +1,23 @@
+[
+  {
+    "CATALOG_NAME": "SampleData",
+    "SCHEMA_NAME": "SampleData",
+    "CUBE_NAME": "Quadrant Analysis",
+    "CUBE_TYPE": "CUBE",
+    "CUBE_GUID": null,
+    "CREATED_ON": null,
+    "LAST_SCHEMA_UPDATE": 1448884397000,
+    "SCHEMA_UPDATED_BY": null,
+    "LAST_DATA_UPDATE": null,
+    "DATA_UPDATED_BY": null,
+    "IS_DRILLTHROUGH_ENABLED": true,
+    "IS_WRITE_ENABLED": false,
+    "IS_LINKABLE": false,
+    "IS_SQL_ENABLED": false,
+    "CUBE_CAPTION": "Quadrant Analysis",
+    "DESCRIPTION": "SampleData Schema - Quadrant Analysis Cube",
+    "DIMENSIONS": null,
+    "SETS": null,
+    "MEASURES": null
+  }
+]

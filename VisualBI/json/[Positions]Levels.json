@@ -1,0 +1,38 @@
+[
+  {
+    "CATALOG_NAME": "SampleData",
+    "SCHEMA_NAME": "SampleData",
+    "CUBE_NAME": "Quadrant Analysis",
+    "DIMENSION_UNIQUE_NAME": "[Positions]",
+    "HIERARCHY_UNIQUE_NAME": "[Positions]",
+    "LEVEL_NAME": "(All)",
+    "LEVEL_UNIQUE_NAME": "[Positions].[(All)]",
+    "LEVEL_GUID": null,
+    "LEVEL_CAPTION": "(All)",
+    "LEVEL_NUMBER": 0,
+    "LEVEL_CARDINALITY": 1,
+    "LEVEL_TYPE": 1,
+    "CUSTOM_ROLLUP_SETTINGS": 0,
+    "LEVEL_UNIQUE_SETTINGS": 3,
+    "LEVEL_IS_VISIBLE": true,
+    "DESCRIPTION": "Quadrant Analysis Cube - Positions Hierarchy - (All) Level"
+  },
+  {
+    "CATALOG_NAME": "SampleData",
+    "SCHEMA_NAME": "SampleData",
+    "CUBE_NAME": "Quadrant Analysis",
+    "DIMENSION_UNIQUE_NAME": "[Positions]",
+    "HIERARCHY_UNIQUE_NAME": "[Positions]",
+    "LEVEL_NAME": "Positions",
+    "LEVEL_UNIQUE_NAME": "[Positions].[Positions]",
+    "LEVEL_GUID": null,
+    "LEVEL_CAPTION": "Positions",
+    "LEVEL_NUMBER": 1,
+    "LEVEL_CARDINALITY": 37,
+    "LEVEL_TYPE": 0,
+    "CUSTOM_ROLLUP_SETTINGS": 0,
+    "LEVEL_UNIQUE_SETTINGS": 1,
+    "LEVEL_IS_VISIBLE": true,
+    "DESCRIPTION": "Quadrant Analysis Cube - Positions Hierarchy - Positions Level"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "CATALOG_NAME": "SampleData",
+    "SCHEMA_NAME": "SampleData",
+    "CUBE_NAME": "Quadrant Analysis",
+    "DIMENSION_UNIQUE_NAME": "[Measures]",
+    "HIERARCHY_UNIQUE_NAME": "[Measures]",
+    "LEVEL_NAME": "MeasuresLevel",
+    "LEVEL_UNIQUE_NAME": "[Measures].[MeasuresLevel]",
+    "LEVEL_GUID": null,
+    "LEVEL_CAPTION": "MeasuresLevel",
+    "LEVEL_NUMBER": 0,
+    "LEVEL_CARDINALITY": 4,
+    "LEVEL_TYPE": 0,
+    "CUSTOM_ROLLUP_SETTINGS": 0,
+    "LEVEL_UNIQUE_SETTINGS": 0,
+    "LEVEL_IS_VISIBLE": true,
+    "DESCRIPTION": "Quadrant Analysis Cube - Measures Hierarchy - MeasuresLevel Level"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "CATALOG_NAME": "SampleData",
+    "SCHEMA_NAME": "SampleData",
+    "CUBE_NAME": "Quadrant Analysis",
+    "DIMENSION_UNIQUE_NAME": "[Positions]",
+    "HIERARCHY_UNIQUE_NAME": "[Positions]",
+    "LEVEL_UNIQUE_NAME": "[Positions].[(All)]",
+    "LEVEL_NUMBER": 0,
+    "MEMBER_ORDINAL": 0,
+    "MEMBER_NAME": "All Positions",
+    "MEMBER_UNIQUE_NAME": "[Positions].[All Positions]",
+    "MEMBER_TYPE": 2,
+    "MEMBER_GUID": null,
+    "MEMBER_CAPTION": "All Positions",
+    "CHILDREN_CARDINALITY": 37,
+    "PARENT_LEVEL": 0,
+    "PARENT_UNIQUE_NAME": null,
+    "PARENT_COUNT": 0,
+    "TREE_OP": null,
+    "DEPTH": 0
+  }
+]

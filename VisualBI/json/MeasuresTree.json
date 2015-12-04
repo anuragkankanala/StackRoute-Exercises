@@ -1,0 +1,32 @@
+[
+  {
+    "LEVEL": "DIMENSION_UNIQUE_NAME",
+    "LABEL": "[Measures]",
+    "CHILDREN": [
+      {
+        "LEVEL": "HIERARCHY_UNIQUE_NAME",
+        "LABEL": "[Measures]",
+        "CHILDREN": [
+          {
+            "LEVEL": "LEVEL_UNIQUE_NAME",
+            "LABEL": "[Measures].[MeasuresLevel]",
+            "CHILDREN": [
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Measures].[Actual]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Measures].[Budget]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Measures].[Variance]"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

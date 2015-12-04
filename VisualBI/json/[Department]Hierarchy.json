@@ -1,0 +1,27 @@
+[
+  {
+    "CATALOG_NAME": "SampleData",
+    "SCHEMA_NAME": "SampleData",
+    "CUBE_NAME": "Quadrant Analysis",
+    "DIMENSION_UNIQUE_NAME": "[Department]",
+    "HIERARCHY_NAME": "Department",
+    "HIERARCHY_UNIQUE_NAME": "[Department]",
+    "HIERARCHY_GUID": null,
+    "HIERARCHY_CAPTION": "Department",
+    "DIMENSION_TYPE": 3,
+    "HIERARCHY_CARDINALITY": 8,
+    "DEFAULT_MEMBER": "[Department].[All Departments]",
+    "ALL_MEMBER": "[Department].[All Departments]",
+    "DESCRIPTION": "Quadrant Analysis Cube - Department Hierarchy",
+    "STRUCTURE": 0,
+    "IS_VIRTUAL": false,
+    "IS_READWRITE": false,
+    "DIMENSION_UNIQUE_SETTINGS": 0,
+    "DIMENSION_IS_VISIBLE": true,
+    "HIERARCHY_IS_VISIBLE": true,
+    "HIERARCHY_ORDINAL": 2,
+    "DIMENSION_IS_SHARED": true,
+    "PARENT_CHILD": false,
+    "LEVELS": null
+  }
+]

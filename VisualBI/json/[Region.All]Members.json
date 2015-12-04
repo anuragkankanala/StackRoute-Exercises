@@ -1,0 +1,23 @@
+[
+  {
+    "CATALOG_NAME": "SampleData",
+    "SCHEMA_NAME": "SampleData",
+    "CUBE_NAME": "Quadrant Analysis",
+    "DIMENSION_UNIQUE_NAME": "[Region]",
+    "HIERARCHY_UNIQUE_NAME": "[Region]",
+    "LEVEL_UNIQUE_NAME": "[Region].[(All)]",
+    "LEVEL_NUMBER": 0,
+    "MEMBER_ORDINAL": 0,
+    "MEMBER_NAME": "All Regions",
+    "MEMBER_UNIQUE_NAME": "[Region].[All Regions]",
+    "MEMBER_TYPE": 2,
+    "MEMBER_GUID": null,
+    "MEMBER_CAPTION": "All Regions",
+    "CHILDREN_CARDINALITY": 4,
+    "PARENT_LEVEL": 0,
+    "PARENT_UNIQUE_NAME": null,
+    "PARENT_COUNT": 0,
+    "TREE_OP": null,
+    "DEPTH": 0
+  }
+]

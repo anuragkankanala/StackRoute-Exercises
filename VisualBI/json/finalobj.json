@@ -1,0 +1,58 @@
+[
+  {
+    "LEVEL": "DIMENSION_UNIQUE_NAME",
+    "LABEL": "[Department]",
+    "CHILDREN": [
+      {
+        "LEVEL": "HIERARCHY_UNIQUE_NAME",
+        "LABEL": "[Department]",
+        "CHILDREN": [
+          {
+            "LEVEL": "LEVEL_UNIQUE_NAME",
+            "LABEL": "[Department].[(All)]",
+            "CHILDREN": [
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[All Departments]"
+              }
+            ]
+          },
+          {
+            "LEVEL": "LEVEL_UNIQUE_NAME",
+            "LABEL": "[Department].[Department]",
+            "CHILDREN": [
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Executive Management]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Finance]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Human Resource]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Marketing & Communication]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Product Development]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Professional Services]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Sales]"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

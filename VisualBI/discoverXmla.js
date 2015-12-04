@@ -141,6 +141,7 @@ function discoverCatalogName(options) {
           returnObj = JSON.stringify(xmlaResponse.fetchAllAsObject(),null,2);
           response.write(returnObj);
           fs.writeFile("./json/DataCatalogName.json",returnObj);
+          server.close();
         },
         error:function(){
           response.write("Error finding the DataSourceName");
@@ -148,7 +149,7 @@ function discoverCatalogName(options) {
         },
         callback:function() {
           response.end();
-          server.close();
+
         }
       }
 
@@ -455,7 +456,7 @@ function discoverHierarchies(options) {
         success:function(xmla,xmlaRequest,xmlaResponse) {
           returnObj = JSON.stringify(xmlaResponse.fetchAllAsObject(),null,2);
           response.write(returnObj);
-          fs.writeFile("./json/Hierarchies.json",returnObj);
+          fs.writeFile("./json/Hierarchy.json",returnObj);
         },
         error:function(){
           response.write("Error finding the Dimensions details");
@@ -740,12 +741,23 @@ function discoverMembers(options) {
 
 }
 
+//--------------------------Export Modules------------------------------------------------------------------
+module.exports = {
+  discoverDataSourceName : discoverDataSourceName,
+  discoverCatalogName: discoverCatalogName,
+  discoverCubeName : discoverCubeName,
+  discoverDimensions : discoverDimensions,
+  discoverHierarchies : discoverHierarchies,
+  discoverLevels : discoverLevels,
+  discoverMembers : discoverMembers
+}
+
 //----------------------------------------Test Code--------------------------------------------------------------------
-
-
-var options2 = {};
-options2.xmlaServer = "http://172.23.238.252:8080/pentaho/Xmla%3fuserid=admin%26password=password";
-options2.pathName = "/Pentaho";
-options2.hostAddress = "http://localhost:8080";
-
-discoverCatalogName(options2);
+//
+//
+// var options2 = {};
+// options2.xmlaServer = "http://172.23.238.252:8080/pentaho/Xmla%3fuserid=admin%26password=password";
+// options2.pathName = "/Pentaho";
+// options2.hostAddress = "http://localhost:8080";
+//
+// discoverCatalogName(options2);

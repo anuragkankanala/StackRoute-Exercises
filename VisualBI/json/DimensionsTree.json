@@ -1,0 +1,278 @@
+[
+  {
+    "LEVEL": "DIMENSION_UNIQUE_NAME",
+    "LABEL": "[Department]",
+    "CHILDREN": [
+      {
+        "LEVEL": "HIERARCHY_UNIQUE_NAME",
+        "LABEL": "[Department]",
+        "CHILDREN": [
+          {
+            "LEVEL": "LEVEL_UNIQUE_NAME",
+            "LABEL": "[Department].[(All)]",
+            "CHILDREN": [
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[All Departments]"
+              }
+            ]
+          },
+          {
+            "LEVEL": "LEVEL_UNIQUE_NAME",
+            "LABEL": "[Department].[Department]",
+            "CHILDREN": [
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Executive Management]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Finance]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Human Resource]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Marketing & Communication]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Product Development]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Professional Services]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Department].[Sales]"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "LEVEL": "DIMENSION_UNIQUE_NAME",
+    "LABEL": "[Positions]",
+    "CHILDREN": [
+      {
+        "LEVEL": "HIERARCHY_UNIQUE_NAME",
+        "LABEL": "[Positions]",
+        "CHILDREN": [
+          {
+            "LEVEL": "LEVEL_UNIQUE_NAME",
+            "LABEL": "[Positions].[(All)]",
+            "CHILDREN": [
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[All Positions]"
+              }
+            ]
+          },
+          {
+            "LEVEL": "LEVEL_UNIQUE_NAME",
+            "LABEL": "[Positions].[Positions]",
+            "CHILDREN": [
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Account Executive]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Administration]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Administrative Assistant]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Analyst Relations]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[CEO]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[CFO]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[CMO]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[CTO]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Controller]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Corporate Compliance]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[District Manager]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[EOE]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Engineer]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Graphics]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[HR Generalists]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[HR Training]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[IS]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Payroll]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Pre-Sales]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Press Relations]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Product Marketing Mgr]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[QA Engineer]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[QA Manager]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[SVP HR]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[SVP Partnerships]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[SVP Services]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[SVP Strategic Development]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[SVP WW Operations]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Sales Rep]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Senior Consultant]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Senior Engineer]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Senior Sales Rep]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Services Mgr]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Staff Consultant]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Trainer]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[VP Engineering]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Positions].[Writer]"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "LEVEL": "DIMENSION_UNIQUE_NAME",
+    "LABEL": "[Region]",
+    "CHILDREN": [
+      {
+        "LEVEL": "HIERARCHY_UNIQUE_NAME",
+        "LABEL": "[Region]",
+        "CHILDREN": [
+          {
+            "LEVEL": "LEVEL_UNIQUE_NAME",
+            "LABEL": "[Region].[(All)]",
+            "CHILDREN": [
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Region].[All Regions]"
+              }
+            ]
+          },
+          {
+            "LEVEL": "LEVEL_UNIQUE_NAME",
+            "LABEL": "[Region].[Region]",
+            "CHILDREN": [
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Region].[Central]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Region].[Eastern]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Region].[Southern]"
+              },
+              {
+                "LEVEL": "MEMBER_UNIQUE_NAME",
+                "LABEL": "[Region].[Western]"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
