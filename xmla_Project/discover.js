@@ -26,7 +26,7 @@ exports.getDataSourceName = function(req,res) {
 	var parameters = req.query;
 	var xmlaServer = parameters.xmlaServer;
 	var pathName = parameters.pathName;
-	var hostAddress = parameters.hostAddress;
+	var hostAddress = "http://localhost:8080";
 
 	var discoverRequestTypes =[
 		null,
@@ -48,7 +48,7 @@ exports.getDataSourceName = function(req,res) {
   		success:function(xmla,xmlaRequest,xmlaResponse) {
     		var temp = JSON.stringify(xmlaResponse.fetchAllAsObject(),null,2);
     		returnObj = JSON.parse(temp);
-    		res.write(temp);
+    		res.send(temp);
     		res.end();
   		},
   		error:function(){
@@ -85,7 +85,7 @@ exports.getCatalogName = function(req,res) {
 	var parameters = req.query.searchParam;
 	var xmlaServer = parameters.xmlaServer;
 	var pathName = parameters.pathName;
-	var hostAddress = hostAddress;
+	var hostAddress = "http://localhost:8080";
 
 	var discoverRequestTypes =[
 		null,
@@ -108,7 +108,7 @@ exports.getCatalogName = function(req,res) {
   		success:function(xmla,xmlaRequest,xmlaResponse) {
     		var temp = JSON.stringify(xmlaResponse.fetchAllAsObject(),null,2);
     		returnObj = JSON.parse(temp);
-    		res.write(returnObj[0].CATALOG_NAME);
+    		res.send(temp);
     		res.end();
   		},
   		error:function(){
@@ -150,7 +150,7 @@ exports.getCubeName = function(req,res) {
 	var parameters = req.query.searchParam;
 	var xmlaServer = parameters.xmlaServer;
 	var pathName = parameters.pathName;
-	var hostAddress = hostAddress;
+	var hostAddress = "http://localhost:8080";
 
 	var discoverRequestTypes =[
 		null,
@@ -174,7 +174,7 @@ exports.getCubeName = function(req,res) {
   		success:function(xmla,xmlaRequest,xmlaResponse) {
     		var temp = JSON.stringify(xmlaResponse.fetchAllAsObject(),null,2);
     		returnObj = JSON.parse(temp);
-    		res.write(returnObj[0].CATALOG_NAME);
+    		res.send(temp);
     		res.end();
   		},
   		error:function(){
@@ -223,7 +223,7 @@ exports.getDimensions = function(req,res) {
 	var parameters = req.query.searchParam;
 	var xmlaServer = parameters.xmlaServer;
 	var pathName = parameters.pathName;
-	var hostAddress = hostAddress;
+	var hostAddress = "http://localhost:8080";
 
 	var discoverRequestTypes =[
 		null,
@@ -248,7 +248,7 @@ exports.getDimensions = function(req,res) {
   		success:function(xmla,xmlaRequest,xmlaResponse) {
     		var temp = JSON.stringify(xmlaResponse.fetchAllAsObject(),null,2);
     		returnObj = JSON.parse(temp);
-    		res.write(returnObj[0].CATALOG_NAME);
+    		res.send(temp);
     		res.end();
   		},
   		error:function(){
@@ -308,7 +308,7 @@ exports.getHierarchies = function(req,res) {
 	var parameters = req.query.searchParam;
 	var xmlaServer = parameters.xmlaServer;
 	var pathName = parameters.pathName;
-	var hostAddress = hostAddress;
+	var hostAddress = "http://localhost:8080";
 
 	var discoverRequestTypes =[
 		null,
@@ -334,7 +334,7 @@ exports.getHierarchies = function(req,res) {
   		success:function(xmla,xmlaRequest,xmlaResponse) {
     		var temp = JSON.stringify(xmlaResponse.fetchAllAsObject(),null,2);
     		returnObj = JSON.parse(temp);
-    		res.write(returnObj[0].CATALOG_NAME);
+    		res.send(temp);
     		res.end();
   		},
   		error:function(){
@@ -396,7 +396,7 @@ exports.getLevels = function(req,res) {
 	var parameters = req.query.searchParam;
 	var xmlaServer = parameters.xmlaServer;
 	var pathName = parameters.pathName;
-	var hostAddress = hostAddress;
+	var hostAddress = "http://localhost:8080";
 
 	var discoverRequestTypes =[
 		null,
@@ -423,7 +423,7 @@ exports.getLevels = function(req,res) {
   		success:function(xmla,xmlaRequest,xmlaResponse) {
     		var temp = JSON.stringify(xmlaResponse.fetchAllAsObject(),null,2);
     		returnObj = JSON.parse(temp);
-    		res.write(returnObj[0].CATALOG_NAME);
+    		res.send(temp);
     		res.end();
   		},
   		error:function(){
@@ -487,7 +487,7 @@ exports.getMembers = function(req,res) {
 	var parameters = req.query.searchParam;
 	var xmlaServer = parameters.xmlaServer;
 	var pathName = parameters.pathName;
-	var hostAddress = hostAddress;
+	var hostAddress = "http://localhost:8080";
 
 	var discoverRequestTypes =[
 		null,
@@ -515,7 +515,7 @@ exports.getMembers = function(req,res) {
   		success:function(xmla,xmlaRequest,xmlaResponse) {
     		var temp = JSON.stringify(xmlaResponse.fetchAllAsObject(),null,2);
     		returnObj = JSON.parse(temp);
-    		res.write(returnObj[0].CATALOG_NAME);
+    		res.send(temp);
     		res.end();
   		},
   		error:function(){
